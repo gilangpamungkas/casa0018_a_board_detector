@@ -20,7 +20,7 @@ The full pipeline runs entirely on a Samsung Galaxy S24 FE — no internet or cl
 
 ## Demo Video
 
-[![PaveSafe Demo](docs/figures/video_thumbnail.jpg)](YOUR_VIDEO_LINK_HERE)
+[![PaveSafe Demo](img/video.png)](https://youtube.com/shorts/1hkJpSCanuM?si=L4-rOiVmYBlApgO1)
 
 ---
 
@@ -95,9 +95,8 @@ FOMO is documented as the optimal architecture for constrained/MCU deployment.
 ├── arduino/
 │   └── pavesafe_arduino.ino        # Arduino MKR WiFi 1010 sketch
 │
-└── docs/
-    ├── report.pdf                  # Full project report
-    └── figures/                    # Report figures
+└── img/
+  
 ```
 
 ---
@@ -185,7 +184,6 @@ gradle installDebug
 
 - Extend class taxonomy: cones, barriers, scaffolding
 - Incorporate negative examples (clear pavements) to reduce false positives
-- Integrate with [SafeWalk](https://github.com/gilangpamungkas/Safewalk) pedestrian routing for dynamic rerouting
 - Explore model distillation to improve SSD inference speed on mobile
 
 ---
