@@ -20,7 +20,11 @@ The full pipeline runs entirely on a Samsung Galaxy S24 FE — no internet or cl
 
 ## Demo Video
 
-[![PaveSafe Demo](img/video.png)](https://youtube.com/shorts/1hkJpSCanuM?si=L4-rOiVmYBlApgO1)
+<div align="center">
+  <a href="https://youtube.com/shorts/1hkJpSCanuM?si=L4-rOiVmYBlApgO1">
+    <img src="img/video.png" width="250" alt="PaveSafe Demo">
+  </a>
+</div>
 
 ---
 
