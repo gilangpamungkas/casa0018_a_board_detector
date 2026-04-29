@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="screen-orientation" content="portrait">
+<title>PaveSafe</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+  :root {
+    --cyan:   #00E5FF;
+    --green:  #00E676;
+    --amber:  #FFD600;
+    --red:    #FF1744;
+    --bg:     #080808;
+    --safe:   env(safe-area-inset-top, 0px);
+    --safeb:  env(safe-area-inset-bottom, 0px);
+  }
+
+  html, body {
+    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background: var(--bg);
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    touch-action: none;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+  }
+
+  #topbar {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--safe) + 10px) 16px 10px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 20;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  #topbar h1 {
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    color: #fff;
+  }
+
+  #bt-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,229,255,0.3);
+    background: rgba(0,229,255,0.08);
+    cursor: pointer;
+    transition: all 0.2s;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #bt-btn:active { opacity: 0.7; }
+  #bt-btn.connected {
+    border-color: rgba(0,229,255,0.6);
+    background: rgba(0,229,255,0.15);
+  }
+  #bt-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #333;
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+  #bt-dot.on { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+  #bt-text {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--cyan);
+    white-space: nowrap;
+  }
+
+  #camera-wrap {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    min-height: 0;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #process-canvas { display: none; }
+
+  #overlay-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  #bbox-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+  }
+
+  .bbox-el {
+    position: absolute;
+  }
+
+  .bbox-label {
+    position: absolute;
+    top: -22px;
+    left: 0;
+    font: bold 11px 'Courier New';
+    padding: 2px 6px;
+    white-space: nowrap;
+    color: #000;
+  }
+
+  #instructions {
+    position: absolute;
+    top: 12px; left: 12px; right: 12px;
+    background: rgba(0,0,0,0.82);
+    border: 1px solid rgba(0,229,255,0.25);
+    border-radius: 12px;
+    padding: 14px 16px;
+    z-index: 10;
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  #instructions.hidden {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+  }
+  #instructions .inst-title {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  #instructions ul {
+    list-style: none;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    line-height: 2;
+  }
+  #instructions ul li::before {
+    content: '→ ';
+    color: var(--cyan);
+    opacity: 0.7;
+  }
+
+  #status-banner {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 11px 26px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    border: 2px solid var(--cyan);
+    background: rgba(0,0,0,0.78);
+    color: var(--cyan);
+    transition: border-color 0.25s, color 0.25s, box-shadow 0.25s;
+    white-space: nowrap;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  #status-banner.clear   { border-color: var(--green); color: var(--green); box-shadow: 0 0 20px rgba(0,230,118,0.2); }
+  #status-banner.partial { border-color: var(--amber); color: var(--amber); box-shadow: 0 0 20px rgba(255,214,0,0.2); }
+  #status-banner.blocked { border-color: var(--red);   color: var(--red);   box-shadow: 0 0 20px rgba(255,23,68,0.25); animation: pulse-red 0.8s ease-in-out infinite alternate; }
+
+  @keyframes pulse-red {
+    from { box-shadow: 0 0 10px rgba(255,23,68,0.2); }
+    to   { box-shadow: 0 0 30px rgba(255,23,68,0.5); }
+  }
+
+  #bottombar {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px calc(var(--safeb) + 8px);
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    z-index: 20;
+  }
+  .bar-stat {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #888;
+  }
+  .bar-stat span { color: #aaa; }
+
+  #loading {
+    position: fixed; inset: 0;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    gap: 18px;
+  }
+  #loading h2 {
+    font-size: 20px;
+    letter-spacing: 8px;
+    color: var(--cyan);
+    font-weight: 900;
+  }
+  #loading-msg {
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 0 32px;
+    line-height: 1.8;
+  }
+  .spinner {
+    width: 36px; height: 36px;
+    border: 2px solid #1a1a1a;
+    border-top-color: var(--cyan);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <h2>PAVESAFE</h2>
+  <div class="spinner"></div>
+  <p id="loading-msg">LOADING MODEL...</p>
+</div>
+
+<div id="app">
+  <div id="topbar">
+    <h1>PAVESAFE</h1>
+    <div id="bt-btn">
+      <div id="bt-dot"></div>
+      <span id="bt-text">WIFI</span>
+    </div>
+  </div>
+
+  <div id="camera-wrap">
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="process-canvas"></canvas>
+    <canvas id="overlay-canvas"></canvas>
+    <div id="bbox-container"></div>
+
+    <div id="instructions">
+      <div class="inst-title">HOW TO USE</div>
+      <ul>
+        <li>Hold phone at chest height, screen facing out</li>
+        <li>Tilt slightly downward toward pavement ahead</li>
+        <li>Align pavement within the guide</li>
+        <li>Walk — A-boards detected automatically</li>
+      </ul>
+    </div>
+
+    <div id="status-banner">SCANNING...</div>
+  </div>
+
+  <div id="bottombar">
+    <span class="bar-stat">INFERENCE <span id="fps-val">--</span>ms</span>
+    <span class="bar-stat">SCORE <span id="score-val">--</span></span>
+    <span class="bar-stat">OCC <span id="occ-val">--%</span></span>
+  </div>
+</div>
+
+<script src="edge-impulse-standalone.js"></script>
+<script src="run-impulse.js"></script>
+<script>
+'use strict';
+
+// ── Elements ──────────────────────────────────────────────────────────────────
+const video         = document.getElementById('video');
+const procCanvas    = document.getElementById('process-canvas');
+const overlay       = document.getElementById('overlay-canvas');
+const ctx           = overlay.getContext('2d');
+const procCtx       = procCanvas.getContext('2d');
+const bboxContainer = document.getElementById('bbox-container');
+const loading       = document.getElementById('loading');
+const loadingMsg    = document.getElementById('loading-msg');
+const banner        = document.getElementById('status-banner');
+const instructions  = document.getElementById('instructions');
+const fpsVal        = document.getElementById('fps-val');
+const scoreVal      = document.getElementById('score-val');
+const occVal        = document.getElementById('occ-val');
+const btBtn         = document.getElementById('bt-btn');
+const btDot         = document.getElementById('bt-dot');
+const btText        = document.getElementById('bt-text');
+
+// ── Trapezoid ─────────────────────────────────────────────────────────────────
+const T = {
+  topY: 0.42, topL: 0.39, topR: 0.61,
+  botY: 0.88, botL:-0.05, botR: 1.05,
+};
+
+// ── Configuration ─────────────────────────────────────────────────────────────
+const SMOOTH_N      = 5;
+const SMOOTH_MS     = 400;
+const STATUS_FRAMES = 4;
+const SCORE_THRESH  = 0.5;
+const IOU_GATE      = 0.85;
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let smoothBoxes    = [];
+let lastDetectTime = 0;
+let pendingStatus  = 'scanning';
+let statusCount    = 0;
+let currentStatus  = 'scanning';
+
+// ── Arduino ───────────────────────────────────────────────────────────────────
+const ARDUINO_IP = '10.143.211.222';
+let lastSignal   = null;
+
+function sendToArduino(signal) {
+  if (window.Arduino) {
+    window.Arduino.send(signal);
+    btDot.classList.add('on');
+    btBtn.classList.add('connected');
+    btText.textContent = 'CONNECTED';
+    return;
+  }
+  fetch('http://' + ARDUINO_IP + '/' + signal, { mode: 'no-cors', cache: 'no-store' })
+    .then(() => {
+      btDot.classList.add('on');
+      btBtn.classList.add('connected');
+      btText.textContent = 'CONNECTED';
+    }).catch(() => {
+      btText.textContent = 'WIFI';
+    });
+}
+
+btBtn.addEventListener('click', () => sendToArduino('S'));
+
+function sendBt(signal) {
+  if (signal === lastSignal) return;
+  lastSignal = signal;
+  sendToArduino(signal);
+}
+
+// ── IoU helper ────────────────────────────────────────────────────────────────
+function iou(a, b) {
+  const interL    = Math.max(a.left,   b.left);
+  const interT    = Math.max(a.top,    b.top);
+  const interR    = Math.min(a.right,  b.right);
+  const interB    = Math.min(a.bottom, b.bottom);
+  const interW    = Math.max(0, interR - interL);
+  const interH    = Math.max(0, interB - interT);
+  const interArea = interW * interH;
+  const aArea     = (a.right - a.left) * (a.bottom - a.top);
+  const bArea     = (b.right - b.left) * (b.bottom - b.top);
+  const unionArea = aArea + bArea - interArea;
+  return unionArea > 0 ? interArea / unionArea : 0;
+}
+
+// ── Occupancy ─────────────────────────────────────────────────────────────────
+function pavWidthAtY(y) {
+  const yc = Math.max(T.topY, Math.min(T.botY, y));
+  const t  = (yc - T.topY) / (T.botY - T.topY);
+  return (T.topR + (T.botR - T.topR) * t) - (T.topL + (T.botL - T.topL) * t);
+}
+
+function calcOccupancy(normL, normR, normB) {
+  const pavW = pavWidthAtY(normB);
+  if (pavW <= 0) return 0;
+  const t    = (Math.max(T.topY, Math.min(T.botY, normB)) - T.topY) / (T.botY - T.topY);
+  const pavL = T.topL + (T.botL - T.topL) * t;
+  const pavR = T.topR + (T.botR - T.topR) * t;
+  const ol   = Math.max(normL, pavL);
+  const or_  = Math.min(normR, pavR);
+  return Math.max(0, or_ - ol) / pavW;
+}
+
+// ── Render bounding box ───────────────────────────────────────────────────────
+function renderBBox(smoothedBox, status, occupancy) {
+  bboxContainer.innerHTML = '';
+  if (!smoothedBox) return;
+
+  const col = {
+    scanning: '#00E5FF',
+    clear:    '#00E676',
+    partial:  '#FFD600',
+    blocked:  '#FF1744',
+  }[status] || '#00E5FF';
+
+  // Simple direct mapping — normCoord * screenDimension
+  // Confirmed correct from debug grid test
+  const sw = video.clientWidth;
+  const sh = video.clientHeight;
+
+  const bx = smoothedBox.left                      * sw;
+  const by = smoothedBox.top                       * sh;
+  const bw = (smoothedBox.right  - smoothedBox.left) * sw;
+  const bh = (smoothedBox.bottom - smoothedBox.top)  * sh;
+
+  const el = document.createElement('div');
+  el.className = 'bbox-el';
+  el.style.cssText = `
+    width:      ${bw}px;
+    height:     ${bh}px;
+    left:       ${bx}px;
+    top:        ${by}px;
+    border:     2.5px solid ${col};
+    background: ${col}20;
+    box-shadow: 0 0 12px ${col}40;
+  `;
+
+  // Label
+  const pct   = Math.round(occupancy * 100);
+  const conf  = Math.round(smoothedBox.score * 100);
+  const label = document.createElement('div');
+  label.className = 'bbox-label';
+  label.style.background = col;
+  label.textContent = `A-Board ${conf}%  |  ${pct}% of path`;
+  el.appendChild(label);
+
+  // Corner accents
+  const corners = [
+    { top:'-3px',    left:'-3px',  borderTop:`3px solid ${col}`,    borderLeft:`3px solid ${col}` },
+    { top:'-3px',    right:'-3px', borderTop:`3px solid ${col}`,    borderRight:`3px solid ${col}` },
+    { bottom:'-3px', left:'-3px',  borderBottom:`3px solid ${col}`, borderLeft:`3px solid ${col}` },
+    { bottom:'-3px', right:'-3px', borderBottom:`3px solid ${col}`, borderRight:`3px solid ${col}` },
+  ];
+
+  for (const c of corners) {
+    const corner = document.createElement('div');
+    corner.style.cssText = `
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top:    ${c.top    || 'auto'};
+      bottom: ${c.bottom || 'auto'};
+      left:   ${c.left   || 'auto'};
+      right:  ${c.right  || 'auto'};
+      border-top:    ${c.borderTop    || 'none'};
+      border-bottom: ${c.borderBottom || 'none'};
+      border-left:   ${c.borderLeft   || 'none'};
+      border-right:  ${c.borderRight  || 'none'};
+    `;
+    el.appendChild(corner);
+  }
+
+  bboxContainer.appendChild(el);
+}
+
+// ── Draw trapezoid ────────────────────────────────────────────────────────────
+function drawTrapezoid(status, occupancy, hasBox) {
+  const w = overlay.width;
+  const h = overlay.height;
+  ctx.clearRect(0, 0, w, h);
+
+  const col = {
+    scanning: '#00E5FF',
+    clear:    '#00E676',
+    partial:  '#FFD600',
+    blocked:  '#FF1744',
+  }[status] || '#00E5FF';
+
+  const tl = { x: T.topL * w, y: T.topY * h };
+  const tr = { x: T.topR * w, y: T.topY * h };
+  const bl = { x: T.botL * w, y: T.botY * h };
+  const br = { x: T.botR * w, y: T.botY * h };
+
+  // Dark overlay outside trapezoid
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(-1, -1, w+2, h+2);
+  ctx.moveTo(tl.x, tl.y);
+  ctx.lineTo(tr.x, tr.y);
+  ctx.lineTo(br.x, br.y);
+  ctx.lineTo(bl.x, bl.y);
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(0,0,0,0.52)';
+  ctx.fill('evenodd');
+  ctx.restore();
+
+  // Perspective grid lines
+  ctx.save();
+  ctx.globalAlpha = 0.15;
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 1;
+  [0.25, 0.5, 0.75].forEach(t => {
+    const y  = (T.topY + (T.botY - T.topY) * t) * h;
+    const xl = (T.topL + (T.botL - T.topL) * t) * w;
+    const xr = (T.topR + (T.botR - T.topR) * t) * w;
+    ctx.beginPath(); ctx.moveTo(xl, y); ctx.lineTo(xr, y); ctx.stroke();
+  });
+  ctx.beginPath();
+  ctx.moveTo(0.5 * w, T.topY * h);
+  ctx.lineTo(0.5 * w, T.botY * h);
+  ctx.stroke();
+  ctx.restore();
+
+  // Trapezoid border
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(tl.x, tl.y);
+  ctx.lineTo(tr.x, tr.y);
+  ctx.lineTo(br.x, br.y);
+  ctx.lineTo(bl.x, bl.y);
+  ctx.closePath();
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+  ctx.restore();
+
+  // Corner accents
+  const CL = 16;
+  ctx.save();
+  ctx.strokeStyle = col;
+  ctx.lineWidth = 3.5;
+  ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(tl.x, tl.y); ctx.lineTo(tl.x+CL, tl.y); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(tl.x, tl.y); ctx.lineTo(tl.x, tl.y+CL); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(tr.x, tr.y); ctx.lineTo(tr.x-CL, tr.y); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(tr.x, tr.y); ctx.lineTo(tr.x, tr.y+CL); ctx.stroke();
+  ctx.restore();
+
+  // Depth labels
+  ctx.save();
+  ctx.font = '10px Courier New';
+  ctx.fillStyle = col;
+  ctx.globalAlpha = 0.6;
+  ctx.textAlign = 'right';
+  ctx.fillText('~7m', tl.x - 4, tl.y + 4);
+  ctx.textAlign = 'left';
+  ctx.fillText('~2m', Math.max(4, bl.x + 4), bl.y - 8);
+  ctx.restore();
+
+  // Occupancy bar
+  if (status !== 'scanning' && hasBox) {
+    const barH = 5, mg = 20;
+    const barY = T.botY * h - barH - 4;
+    const barW = w - mg * 2;
+    ctx.save();
+    ctx.fillStyle = 'rgba(255,255,255,0.12)';
+    ctx.beginPath(); ctx.roundRect(mg, barY, barW, barH, 3); ctx.fill();
+    ctx.fillStyle = col;
+    ctx.beginPath(); ctx.roundRect(mg, barY, barW * Math.min(1, occupancy), barH, 3); ctx.fill();
+    ctx.restore();
+  }
+
+  // Status banner
+  banner.className = status;
+  if (status === 'blocked') {
+    banner.textContent = `BLOCKED — ${Math.round(occupancy*100)}% OF PATH`;
+  } else if (status === 'partial') {
+    banner.textContent = `PARTIAL — ${Math.round(occupancy*100)}% OF PATH`;
+  } else if (status === 'clear') {
+    banner.textContent = 'PATH CLEAR';
+  } else {
+    banner.textContent = 'SCANNING...';
+  }
+}
+
+// ── Inference ─────────────────────────────────────────────────────────────────
+let classifier = null;
+let modelProps = null;
+let inferring  = false;
+let firstDone  = false;
+
+async function runInference() {
+  if (!classifier || inferring || video.readyState < 2) return;
+  inferring = true;
+
+  try {
+    const iw = modelProps ? modelProps.image_input_width  : 320;
+    const ih = modelProps ? modelProps.image_input_height : 320;
+
+    procCanvas.width  = iw;
+    procCanvas.height = ih;
+    procCtx.drawImage(video, 0, 0, iw, ih);
+
+    const imageData = procCtx.getImageData(0, 0, iw, ih);
+    const values    = new Array(iw * ih);
+    for (let i = 0; i < iw * ih; i++) {
+      values[i] = (imageData.data[i*4]   << 16)
+                | (imageData.data[i*4+1] <<  8)
+                |  imageData.data[i*4+2];
+    }
+
+    const start = Date.now();
+    const res   = classifier.classify(values, false);
+    const ms    = Date.now() - start;
+    fpsVal.textContent = ms;
+
+    // Filter detections
+    const dets = (res.results || [])
+      .filter(r => typeof r.x === 'number' && r.value >= SCORE_THRESH)
+      .sort((a, b) => b.value - a.value);
+
+    if (dets.length > 0) {
+      const d   = dets[0];
+      const iw2 = modelProps ? modelProps.image_input_width  : 320;
+      const ih2 = modelProps ? modelProps.image_input_height : 320;
+
+      const normBox = {
+        left:   d.x / iw2,
+        top:    d.y / ih2,
+        right:  (d.x + d.width)  / iw2,
+        bottom: (d.y + d.height) / ih2,
+        score:  d.value,
+      };
+
+      // IoU gating
+      const lastBox = smoothBoxes[smoothBoxes.length - 1];
+      if (!lastBox || iou(normBox, lastBox) < IOU_GATE) {
+        smoothBoxes.push(normBox);
+        if (smoothBoxes.length > SMOOTH_N) smoothBoxes.shift();
+      }
+
+      lastDetectTime = Date.now();
+      scoreVal.textContent = d.value.toFixed(2);
+
+      if (!firstDone) {
+        firstDone = true;
+        instructions.classList.add('hidden');
+      }
+    } else {
+      scoreVal.textContent = '--';
+      if (Date.now() - lastDetectTime > SMOOTH_MS) {
+        smoothBoxes = [];
+      }
+    }
+
+    // Average smoothed boxes
+    let smoothedBox = null;
+    if (smoothBoxes.length > 0) {
+      const n = smoothBoxes.length;
+      smoothedBox = {
+        left:   smoothBoxes.reduce((s,b) => s + b.left,   0) / n,
+        top:    smoothBoxes.reduce((s,b) => s + b.top,    0) / n,
+        right:  smoothBoxes.reduce((s,b) => s + b.right,  0) / n,
+        bottom: smoothBoxes.reduce((s,b) => s + b.bottom, 0) / n,
+        score:  smoothBoxes.reduce((s,b) => s + b.score,  0) / n,
+      };
+    }
+
+    // Occupancy
+    let occupancy = 0;
+    let newStatus = firstDone ? 'clear' : 'scanning';
+
+    if (smoothedBox) {
+      occupancy = calcOccupancy(smoothedBox.left, smoothedBox.right, smoothedBox.bottom);
+      if      (occupancy >= 0.50) newStatus = 'blocked';
+      else if (occupancy >= 0.25) newStatus = 'partial';
+      else                        newStatus = 'clear';
+    }
+
+    // Status debounce
+    if (newStatus === pendingStatus) {
+      statusCount++;
+      if (statusCount >= STATUS_FRAMES) {
+        currentStatus = newStatus;
+        statusCount   = 0;
+      }
+    } else {
+      pendingStatus = newStatus;
+      statusCount   = 1;
+    }
+
+    occVal.textContent = smoothedBox
+      ? Math.round(occupancy * 100) + '%'
+      : '--%';
+
+    // Arduino
+    if      (currentStatus === 'blocked') sendBt('B');
+    else if (currentStatus === 'partial') sendBt('P');
+    else                                  sendBt('C');
+
+    // Render
+    drawTrapezoid(currentStatus, occupancy, !!smoothedBox);
+    renderBBox(smoothedBox, currentStatus, occupancy);
+
+  } catch(e) {
+    console.error('Inference error:', e);
+  }
+
+  inferring = false;
+}
+
+// ── Resize overlay ────────────────────────────────────────────────────────────
+function resizeOverlay() {
+  const wrap = document.getElementById('camera-wrap');
+  overlay.width  = wrap.clientWidth;
+  overlay.height = wrap.clientHeight;
+}
+
+async function lockPortrait() {
+  try { await screen.orientation.lock('portrait-primary'); } catch(e) {}
+}
+
+async function init() {
+  await lockPortrait();
+
+  loadingMsg.textContent = 'STARTING CAMERA...';
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      audio: false,
+      video: {
+        facingMode: { ideal: 'environment' },
+        width:  { ideal: 512 },
+        height: { ideal: 512 },
+      }
+    });
+    video.srcObject = stream;
+    await new Promise(r => video.onloadedmetadata = r);
+    await video.play();
+  } catch(e) {
+    loadingMsg.textContent = 'CAMERA ERROR: ' + e.message;
+    return;
+  }
+
+  loadingMsg.textContent = 'LOADING MODEL...';
+  try {
+    classifier = new EdgeImpulseClassifier();
+    await classifier.init();
+    modelProps = classifier.getProperties();
+    if (modelProps.thresholds) {
+      try {
+        classifier.setThreshold({ id: modelProps.thresholds[0].id, min_score: SCORE_THRESH });
+      } catch(e) {}
+    }
+  } catch(e) {
+    loadingMsg.textContent = 'MODEL ERROR: ' + e.message;
+    return;
+  }
+
+  resizeOverlay();
+  window.addEventListener('resize', resizeOverlay);
+
+  loading.style.opacity = '0';
+  loading.style.transition = 'opacity 0.4s';
+  setTimeout(() => loading.style.display = 'none', 400);
+
+  setInterval(runInference, 300);
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:2:1-32:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/d0fa48ed0e7be8c82f10efa9c43d8a87/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/2d0996c109f1849cc9439542dd9a509f/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b04276e0dfb9d8e80c44eec250ff3d48/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/6c030f043066f5dddcc709c2b496c49f/transformed/jetified-activity-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/f1cb3ecf1b42e304dc4a3f5171ff6329/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/fe0aa51154937a59292d1155278bbd17/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b65b7297ef0df6bf6e6d1c203b412340/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/9bf535eee4dff68a364d29337badaf96/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ae75a56119e55e9294f83e131ef6a47b/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/38f9daa17c9473402503626ca960b10e/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/e8664004c0f6f9de7ae83ba51a40b422/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/fcaceb5b22d61b05b52382cccce99f82/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/15bd54702ed0e2fe0212b2ff545495bc/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/c0dce7f143474f175bd43066faa73193/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bfa0f21d1c9b3a81208d3b046195a2ee/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bf24561d5fcc3d0f403616968b65f375/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ab2014eb8f39944e0598dcda70c54391/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/8568ffa8507f673dcf9cf3ea6c220b03/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ab6df1f1c21247b41ed8140c21f3b06b/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/5d91e020a80fcdf8a61543994cace9f2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b612a1b9b84e65ee7f28e7d5e9d529f2/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/5fe9689385b706d5f1dae3a8bb6fcb7f/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/9e3a03724710c52321093364957804a5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/f820efdfdeba8dbacfc689677567c512/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/e7983b9d7b1828821914cdfc225534eb/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+	package
+		INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CAMERA
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:4:5-65
+	android:name
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:4:22-62
+uses-permission#android.permission.INTERNET
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:6:5-76
+	android:name
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:6:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:7:5-76
+	android:name
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:7:22-73
+uses-feature#android.hardware.camera
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:9:5-84
+	android:required
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:9:58-81
+	android:name
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:9:19-57
+application
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:11:5-30:19
+INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:11:5-30:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/5d91e020a80fcdf8a61543994cace9f2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/5d91e020a80fcdf8a61543994cace9f2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b612a1b9b84e65ee7f28e7d5e9d529f2/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b612a1b9b84e65ee7f28e7d5e9d529f2/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:14:9-33
+	android:hardwareAccelerated
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:16:9-43
+	android:icon
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:13:9-43
+	android:allowBackup
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:12:9-36
+	android:theme
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:15:9-46
+	android:networkSecurityConfig
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:17:9-69
+	android:usesCleartextTraffic
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:18:9-44
+activity#com.pavesafe.MainActivity
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:20:9-29:20
+	android:screenOrientation
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:23:13-49
+	android:windowSoftInputMode
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:24:13-56
+	android:exported
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:22:13-36
+	android:name
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:21:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:25:13-28:29
+action#android.intent.action.MAIN
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:26:17-69
+	android:name
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:26:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:27:27-74
+uses-sdk
+INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/d0fa48ed0e7be8c82f10efa9c43d8a87/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/d0fa48ed0e7be8c82f10efa9c43d8a87/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/2d0996c109f1849cc9439542dd9a509f/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/2d0996c109f1849cc9439542dd9a509f/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b04276e0dfb9d8e80c44eec250ff3d48/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b04276e0dfb9d8e80c44eec250ff3d48/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/6c030f043066f5dddcc709c2b496c49f/transformed/jetified-activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/6c030f043066f5dddcc709c2b496c49f/transformed/jetified-activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/f1cb3ecf1b42e304dc4a3f5171ff6329/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/f1cb3ecf1b42e304dc4a3f5171ff6329/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/fe0aa51154937a59292d1155278bbd17/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/fe0aa51154937a59292d1155278bbd17/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b65b7297ef0df6bf6e6d1c203b412340/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b65b7297ef0df6bf6e6d1c203b412340/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/9bf535eee4dff68a364d29337badaf96/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/9bf535eee4dff68a364d29337badaf96/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ae75a56119e55e9294f83e131ef6a47b/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ae75a56119e55e9294f83e131ef6a47b/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/38f9daa17c9473402503626ca960b10e/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/38f9daa17c9473402503626ca960b10e/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/e8664004c0f6f9de7ae83ba51a40b422/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/e8664004c0f6f9de7ae83ba51a40b422/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/fcaceb5b22d61b05b52382cccce99f82/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/fcaceb5b22d61b05b52382cccce99f82/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/15bd54702ed0e2fe0212b2ff545495bc/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/15bd54702ed0e2fe0212b2ff545495bc/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/c0dce7f143474f175bd43066faa73193/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/c0dce7f143474f175bd43066faa73193/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bfa0f21d1c9b3a81208d3b046195a2ee/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bfa0f21d1c9b3a81208d3b046195a2ee/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bf24561d5fcc3d0f403616968b65f375/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bf24561d5fcc3d0f403616968b65f375/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ab2014eb8f39944e0598dcda70c54391/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ab2014eb8f39944e0598dcda70c54391/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/8568ffa8507f673dcf9cf3ea6c220b03/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/8568ffa8507f673dcf9cf3ea6c220b03/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ab6df1f1c21247b41ed8140c21f3b06b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ab6df1f1c21247b41ed8140c21f3b06b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/5d91e020a80fcdf8a61543994cace9f2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/5d91e020a80fcdf8a61543994cace9f2/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b612a1b9b84e65ee7f28e7d5e9d529f2/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b612a1b9b84e65ee7f28e7d5e9d529f2/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/5fe9689385b706d5f1dae3a8bb6fcb7f/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/5fe9689385b706d5f1dae3a8bb6fcb7f/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/9e3a03724710c52321093364957804a5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/9e3a03724710c52321093364957804a5/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/f820efdfdeba8dbacfc689677567c512/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/f820efdfdeba8dbacfc689677567c512/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/e7983b9d7b1828821914cdfc225534eb/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/e7983b9d7b1828821914cdfc225534eb/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+	android:targetSdkVersion
+		INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b612a1b9b84e65ee7f28e7d5e9d529f2/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b612a1b9b84e65ee7f28e7d5e9d529f2/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.pavesafe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.pavesafe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78

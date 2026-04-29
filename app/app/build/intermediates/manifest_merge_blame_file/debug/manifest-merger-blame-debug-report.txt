@@ -1,0 +1,107 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.pavesafe"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:4:5-65
+11-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:4:22-62
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:5:5-67
+12-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:6:5-76
+13-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:6:22-73
+14    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+14-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:7:5-76
+14-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:7:22-73
+15
+16    <uses-feature
+16-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:9:5-84
+17        android:name="android.hardware.camera"
+17-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:9:19-57
+18        android:required="true" />
+18-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:9:58-81
+19
+20    <permission
+20-->[androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+21        android:name="com.pavesafe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.pavesafe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:11:5-30:19
+27        android:allowBackup="false"
+27-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:12:9-36
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.12.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+29        android:debuggable="true"
+30        android:extractNativeLibs="false"
+31        android:hardwareAccelerated="true"
+31-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:16:9-43
+32        android:icon="@mipmap/ic_launcher"
+32-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:13:9-43
+33        android:label="PaveSafe"
+33-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:14:9-33
+34        android:networkSecurityConfig="@xml/network_security_config"
+34-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:17:9-69
+35        android:theme="@style/Theme.PaveSafe"
+35-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:15:9-46
+36        android:usesCleartextTraffic="true" >
+36-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:18:9-44
+37        <activity
+37-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:20:9-29:20
+38            android:name="com.pavesafe.MainActivity"
+38-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:21:13-41
+39            android:exported="true"
+39-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:22:13-36
+40            android:screenOrientation="portrait"
+40-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:23:13-49
+41            android:windowSoftInputMode="adjustNothing" >
+41-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:24:13-56
+42            <intent-filter>
+42-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:25:13-28:29
+43                <action android:name="android.intent.action.MAIN" />
+43-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:26:17-69
+43-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:26:25-66
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:27:17-77
+45-->/Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/AndroidManifest.xml:27:27-74
+46            </intent-filter>
+47        </activity>
+48
+49        <provider
+49-->[androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+50            android:name="androidx.startup.InitializationProvider"
+50-->[androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+51            android:authorities="com.pavesafe.androidx-startup"
+51-->[androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+52            android:exported="false" >
+52-->[androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+53            <meta-data
+53-->[androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+54                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+54-->[androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+55                android:value="androidx.startup" />
+55-->[androidx.emoji2:emoji2:1.2.0] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+56            <meta-data
+56-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+57                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+57-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+58                android:value="androidx.startup" />
+58-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+59        </provider>
+60    </application>
+61
+62</manifest>

@@ -1,0 +1,23 @@
+com.pavesafe.app-core-1.12.0-0 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/228f47e1e660f3e7d30b0fc5d76d3876/transformed/core-1.12.0/res
+com.pavesafe.app-appcompat-1.6.1-1 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/2d0996c109f1849cc9439542dd9a509f/transformed/appcompat-1.6.1/res
+com.pavesafe.app-jetified-lifecycle-process-2.4.1-2 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/537c3acfa16f394ee79fa5f78a472ca8/transformed/jetified-lifecycle-process-2.4.1/res
+com.pavesafe.app-jetified-activity-1.6.0-3 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/6c030f043066f5dddcc709c2b496c49f/transformed/jetified-activity-1.6.0/res
+com.pavesafe.app-lifecycle-runtime-2.5.1-4 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/8568ffa8507f673dcf9cf3ea6c220b03/transformed/lifecycle-runtime-2.5.1/res
+com.pavesafe.app-jetified-emoji2-views-helper-1.2.0-5 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/ae75a56119e55e9294f83e131ef6a47b/transformed/jetified-emoji2-views-helper-1.2.0/res
+com.pavesafe.app-fragment-1.3.6-6 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b04276e0dfb9d8e80c44eec250ff3d48/transformed/fragment-1.3.6/res
+com.pavesafe.app-jetified-startup-runtime-1.1.1-7 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b612a1b9b84e65ee7f28e7d5e9d529f2/transformed/jetified-startup-runtime-1.1.1/res
+com.pavesafe.app-jetified-lifecycle-viewmodel-savedstate-2.5.1-8 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/b65b7297ef0df6bf6e6d1c203b412340/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/res
+com.pavesafe.app-jetified-emoji2-1.2.0-9 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bdc2b1eb9b20ebe466ee6219c352cac2/transformed/jetified-emoji2-1.2.0/res
+com.pavesafe.app-jetified-annotation-experimental-1.3.0-10 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bf24561d5fcc3d0f403616968b65f375/transformed/jetified-annotation-experimental-1.3.0/res
+com.pavesafe.app-jetified-savedstate-1.2.0-11 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/bfa0f21d1c9b3a81208d3b046195a2ee/transformed/jetified-savedstate-1.2.0/res
+com.pavesafe.app-jetified-core-ktx-1.12.0-12 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/c0dce7f143474f175bd43066faa73193/transformed/jetified-core-ktx-1.12.0/res
+com.pavesafe.app-jetified-appcompat-resources-1.6.1-13 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/d0fa48ed0e7be8c82f10efa9c43d8a87/transformed/jetified-appcompat-resources-1.6.1/res
+com.pavesafe.app-lifecycle-livedata-core-2.5.1-14 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/f820efdfdeba8dbacfc689677567c512/transformed/lifecycle-livedata-core-2.5.1/res
+com.pavesafe.app-lifecycle-viewmodel-2.5.1-15 /Users/gilangpamungkas/.gradle/caches/8.14.4/transforms/fe0aa51154937a59292d1155278bbd17/transformed/lifecycle-viewmodel-2.5.1/res
+com.pavesafe.app-pngs-16 /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/build/generated/res/pngs/debug
+com.pavesafe.app-resValues-17 /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/build/generated/res/resValues/debug
+com.pavesafe.app-packageDebugResources-18 /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.pavesafe.app-packageDebugResources-19 /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.pavesafe.app-merged_res-20 /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/build/intermediates/merged_res/debug
+com.pavesafe.app-debug-21 /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/debug/res
+com.pavesafe.app-main-22 /Users/gilangpamungkas/Documents/MSc Connected Environments/CASA0018 Deep Learning/pavesafe_android/app/src/main/res
